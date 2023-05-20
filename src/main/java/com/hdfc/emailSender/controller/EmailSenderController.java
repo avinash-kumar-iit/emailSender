@@ -27,7 +27,7 @@ public class EmailSenderController {
 //    }
     @PostMapping("/send-email")
     public String  sendEmail() {
-    	String s="Nirakara.dash03@gmail.com";
+    	String s="******@gmail.com";
         emailService.sendEmail(s, "creating email by java code", "Hi Nirakar Sir"
         		+ " I am able to sent email by smtp server by using java sppring boot code "
         		+ "Thanks Avinash Kumar");
