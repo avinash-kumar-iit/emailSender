@@ -46,10 +46,10 @@ public class CamelEmailSenderImpl {
 			    public void configure() throws Exception {
 			        from("direct:sendEmail")
 //                        .setHeader("subject", constant("Test Email"))
-//                        .setHeader("to", constant("avinashkr.cseiitbhu@gmail.com"))
-//                        .setHeader("from", constant("avinashkr.cseiitbhu@gmail.com"))
+//                        .setHeader("to", constant("*******@gmail.com"))
+//                        .setHeader("from", constant("*******@gmail.com"))
 //                        .setBody(constant("This is a test email"))
-			                .to("smtps://smtp.gmail.com?username=avinashkr.cseiitbhu@gmail.com&password=ywavmpachqdgbufq");
+			                .to("smtps://smtp.gmail.com?username=***********u@gmail.com&password=**********");
 			    }
 				
 			});
@@ -63,8 +63,8 @@ public class CamelEmailSenderImpl {
         ProducerTemplate template = context.createProducerTemplate();
         
 		Map<String,Object> headers = new HashMap<String,Object>();
-		headers.put("To", "Guest Camel <avinash.kumar.cse14@itbhu.ac.in> ; avinashkr.cseiitbhu@gmail.com ; avinashkr.cseiitbhu@gmail.com ");
-		headers.put("From", "User One <avinashkr.cseiitbhu@gmail.com>");
+		headers.put("To", "Guest Camel <*******u.ac.in> ; *******@gmail.com ; *******@gmail.com ");
+		headers.put("From", "User One <*******@gmail.com>");
 		headers.put("Subject", "Its therel");
 		
 		template.sendBodyAndHeaders("direct:sendEmail", "Test mail to many user of Apache", headers);
