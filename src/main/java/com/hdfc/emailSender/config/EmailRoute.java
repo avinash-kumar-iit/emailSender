@@ -20,10 +20,10 @@ public class EmailRoute extends RouteBuilder {
     public void configure() throws Exception {
         from("direct:sendEmail")
 //                .setHeader("subject", constant("Test Email"))
-//                .setHeader("to", constant("avinashkr.cseiitbhu@gmail.com"))
-//                .setHeader("from", constant("avinashkr.cseiitbhu@gmail.com"))
+//                .setHeader("to", constant("*******@gmail.com"))
+//                .setHeader("from", constant("*******@gmail.com"))
 //                .setBody(constant("This is a test email"))
-                .to("smtps://smtp.gmail.com?username=avinashkr.cseiitbhu@gmail.com&password=ywavmpachqdgbufq");
+                .to("smtps://smtp.gmail.com?username=*******@gmail.com&password=*******");
     }
 
 }
